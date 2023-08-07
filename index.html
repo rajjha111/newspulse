@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheNewsPulse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="image/logo.png" alt="company logo">
+
+            </a>
+            <div class="nav-links">
+                <ul class="flex">
+                    <div class="hover-link nav-item" id="latest" onclick="onNavItemClick('latest')">Latest</div>
+                    <div class="hover-link nav-item" id="finance"onclick="onNavItemClick('finance')">Finance</div>
+                    <div class="hover-link nav-item" id="Politics"onclick="onNavItemClick('Politics')">Politics</div>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g Science">
+                <button class="search-button" id="search-button">Search</button>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="card-container container flex" id="cards-container">
+        </div>
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="400x200" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">this is the title</h3>
+                <h6 class="news-source" id="news-source">end gadgets 28/08/2023</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum dolor sit.</p>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
